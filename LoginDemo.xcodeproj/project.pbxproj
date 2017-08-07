@@ -16,6 +16,7 @@
 		182DB08E1F2F27DD00BE06BF /* LoginDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DB08D1F2F27DD00BE06BF /* LoginDemoTests.m */; };
 		182DB0991F2F27DD00BE06BF /* LoginDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DB0981F2F27DD00BE06BF /* LoginDemoUITests.m */; };
 		AFC694C3B9EA14550609F0DE /* libPods-LoginDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F84E154615D1F719D3072CEF /* libPods-LoginDemo.a */; };
+		C559A7551F37FC0B0066F1EE /* GuidePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C559A7541F37FC0B0066F1EE /* GuidePageViewController.m */; };
 		C5DC43A21F334C9E00351C61 /* ForgetPsWdView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DC43991F334C9E00351C61 /* ForgetPsWdView.m */; };
 		C5DC43A31F334C9E00351C61 /* HelpView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DC439B1F334C9E00351C61 /* HelpView.m */; };
 		C5DC43A41F334C9E00351C61 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DC439D1F334C9E00351C61 /* LoginView.m */; };
@@ -59,6 +60,8 @@
 		182DB09A1F2F27DD00BE06BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68776468D18E1833753B4AAF /* Pods-LoginDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoginDemo/Pods-LoginDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		968A2B0370D0F72AD63EF5BA /* Pods-LoginDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoginDemo/Pods-LoginDemo.release.xcconfig"; sourceTree = "<group>"; };
+		C559A7531F37FC0B0066F1EE /* GuidePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidePageViewController.h; sourceTree = "<group>"; };
+		C559A7541F37FC0B0066F1EE /* GuidePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidePageViewController.m; sourceTree = "<group>"; };
 		C5DC43981F334C9E00351C61 /* ForgetPsWdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPsWdView.h; sourceTree = "<group>"; };
 		C5DC43991F334C9E00351C61 /* ForgetPsWdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPsWdView.m; sourceTree = "<group>"; };
 		C5DC439A1F334C9E00351C61 /* HelpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpView.h; sourceTree = "<group>"; };
@@ -123,6 +126,7 @@
 		182DB0721F2F27DD00BE06BF /* LoginDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C559A7521F37FBEF0066F1EE /* Guidepage */,
 				C5DC43971F334C9E00351C61 /* LoginAndRegister */,
 				182DB0761F2F27DD00BE06BF /* AppDelegate.h */,
 				182DB0771F2F27DD00BE06BF /* AppDelegate.m */,
@@ -169,6 +173,15 @@
 				F84E154615D1F719D3072CEF /* libPods-LoginDemo.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C559A7521F37FBEF0066F1EE /* Guidepage */ = {
+			isa = PBXGroup;
+			children = (
+				C559A7531F37FC0B0066F1EE /* GuidePageViewController.h */,
+				C559A7541F37FC0B0066F1EE /* GuidePageViewController.m */,
+			);
+			path = Guidepage;
 			sourceTree = "<group>";
 		};
 		C5DC43971F334C9E00351C61 /* LoginAndRegister */ = {
@@ -385,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5DC43A41F334C9E00351C61 /* LoginView.m in Sources */,
+				C559A7551F37FC0B0066F1EE /* GuidePageViewController.m in Sources */,
 				C5DC43A31F334C9E00351C61 /* HelpView.m in Sources */,
 				182DB07B1F2F27DD00BE06BF /* ViewController.m in Sources */,
 				182DB0781F2F27DD00BE06BF /* AppDelegate.m in Sources */,
