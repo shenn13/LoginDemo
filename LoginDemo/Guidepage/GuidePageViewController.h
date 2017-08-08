@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "CALayer+Transition.h"
+
 @protocol GuidePageViewDelegate <NSObject>
 
 - (void)clickEnter;

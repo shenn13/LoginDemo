@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "GuidePageViewController.h"
+#import "CALayer+Transition.h"
 
 @interface AppDelegate ()<GuidePageViewDelegate>
 
