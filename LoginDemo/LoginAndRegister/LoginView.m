@@ -62,6 +62,7 @@
         self.layer.cornerRadius = 8;
         self.clipsToBounds = YES;
         self.backgroundColor = [UIColor colorWithPatternImage: [UIImage imageNamed:@"bg"]];
+        
         [self createLoginView];
         [self createPhoneLoginView];
     }
@@ -88,8 +89,6 @@
     self.phoneNum.layer.masksToBounds = YES;
     self.phoneNum.layer.cornerRadius = 4;
     self.phoneNum.clipsToBounds = YES;
-//    self.phoneNum.textColor = [UIColor colorWithHexString:@"#00b0f0"];
-//    self.phoneNum.font = font(20);
     UIImageView *userNameLeftViewIV = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"ico_user"]];
     userNameLeftViewIV.contentMode = UIViewContentModeCenter;
     userNameLeftViewIV.frame = CGRectMake(0,0,55,20);
@@ -103,8 +102,6 @@
     self.txtPassWord.placeholder = @"请输入密码 ";
     self.txtPassWord.backgroundColor = [UIColor whiteColor];
     self.txtPassWord.layer.masksToBounds = YES;
-//    self.txtPassWord.textColor = [UIColor colorWithHexString:@"#00b0f0"];
-//    self.txtPassWord.font = font(20);
     self.txtPassWord.layer.cornerRadius = 4;
     self.txtPassWord.clipsToBounds = YES;
     UIImageView *txtLeftViewIV = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"ico_password"]];
@@ -175,8 +172,6 @@
     self.phoneNum2.layer.masksToBounds = YES;
     self.phoneNum2.layer.cornerRadius = 4;
     self.phoneNum2.clipsToBounds = YES;
-//    self.phoneNum2.textColor = [UIColor colorWithHexString:@"#00b0f0"];
-//    self.phoneNum2.font = font(20);
     UIImageView *userNameLeftViewIV = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"ico_user"]];
     userNameLeftViewIV.contentMode = UIViewContentModeCenter;
     userNameLeftViewIV.frame = CGRectMake(0,0,55,20);
@@ -195,8 +190,6 @@
     self.codeNum.leftViewMode = UITextFieldViewModeAlways;
     self.codeNum.leftView = codeLeftViewIV;
     self.codeNum.layer.masksToBounds = YES;
-//    self.codeNum.textColor = [UIColor colorWithHexString:@"#00b0f0"];
-//    self.codeNum.font = font(20);
     self.codeNum.layer.cornerRadius = 4;
     self.codeNum.clipsToBounds = YES;
     [self.phoneLoginView  addSubview:self.codeNum];
@@ -205,8 +198,6 @@
     self.codeBtn.frame = CGRectMake(CGRectGetMaxX(self.codeNum.frame) + 13, CGRectGetMaxY(self.phoneNum.frame) + kMarg_interval ,self.phoneLoginView .frame.size.width/3 - 13 , kControl_height);
     [self.codeBtn setBackgroundColor:[UIColor whiteColor]];
     [self.codeBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
-//    self.codeBtn.titleLabel.font = font(15);
-//    [self.codeBtn setTitleColor:[UIColor colorWithHexString:@"#dbdbdb"] forState:UIControlStateNormal];
     [self.codeBtn addTarget:self action:@selector(codeBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     self.codeBtn.layer.masksToBounds = YES;
     self.codeBtn.layer.cornerRadius = 4;
@@ -220,7 +211,6 @@
     [self.phoneLoginBtn setBackgroundImage:[UIImage imageNamed:@"login_bg"] forState:UIControlStateNormal];
     [self.phoneLoginBtn setBackgroundImage:[UIImage imageNamed:@"loginclicked_bg"] forState:UIControlStateHighlighted];
     [self.phoneLoginBtn setTitle:@"登陆" forState:UIControlStateNormal];
-//    [self.phoneLoginBtn setTitleColor:[UIColor colorWithHexString:@"#fffefe"] forState:UIControlStateNormal];
     [self.phoneLoginBtn addTarget:self action:@selector(loginBtnSendAction2:) forControlEvents:UIControlEventTouchUpInside];
     [self.phoneLoginView  addSubview:self.phoneLoginBtn];
 }
@@ -385,21 +375,6 @@
     }
     else if (self.phoneNum2.text.length == 11)
     {
-        
-//        NSMutableDictionary *params =[NSMutableDictionary dictionary];
-//        NSDictionary *dic = @{@"contactPhone":self.phoneNum2.text};
-//        params[@"data"] = dic;
-//        params[@"source"] =  @"IOS";
-//        NSString *url = student_getVerificationCode;
-//        [TPHttpTool requestWithMethod:@"post" url:url params:params inView:nil success:^(NSDictionary  *responseObj) {
-//            
-//            self.codeResultStr = responseObj[@"result"][@"verificationCode"];
-//            
-//            NSLog(@"--验证码获取--%@",responseObj);
-//            
-//        } failure:^(NSError *error) {
-//            NSLog(@"%@",error);
-//        }];
         
         //在这里获取验证码
         self.timeCount = 60;

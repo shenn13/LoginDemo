@@ -13,6 +13,9 @@
 #import "HelpView.h"
 
 
+#import "FCUUID.h"
+
+
 @interface ViewController ()<RegisterViewSalertViewdelegate,LoginSalertViewdelegate,ForgetPsWdViewAlertViewdelegate,HelpViewAlertViewdelegate>
 
 @property(nonatomic,strong)RegisterView *registerAlertView;
@@ -30,8 +33,7 @@
     
      [super viewDidLoad];
     
-    
-    
+    NSLog(@"\n-uuid:   %@\n -uuidForSession:   %@\n -uuidForInstallation:   %@\n -uuidForVendor:  %@\n -uuidForDevice:   %@\n",[FCUUID uuid],[FCUUID uuidForSession],[FCUUID uuidForInstallation],[FCUUID uuidForVendor],[FCUUID uuidForDevice]);
     
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 80)];
     button.center = self.view.center;
@@ -46,7 +48,7 @@
 - (RegisterView *)registerAlertView
 {
     if (!_registerAlertView) {
-        self.registerAlertView = [[RegisterView alloc] initWithFrame:CGRectMake(40, 120, 570, 399)];
+        self.registerAlertView = [[RegisterView alloc] initWithFrame:CGRectMake(0, 0, 570, 399)];
         self.registerAlertView.delegate = self;
         self.registerAlertView.center = self.view.center;
     }
@@ -65,7 +67,7 @@
 - (LoginView *)loginAlertView
 {
     if (!_loginAlertView) {
-        self.loginAlertView = [[LoginView alloc] initWithFrame:CGRectMake(40, 120, 570, 399)];
+        self.loginAlertView = [[LoginView alloc] initWithFrame:CGRectMake(0, 0, 570, 399)];
         self.loginAlertView.delegate = self;
         self.loginAlertView.center = self.view.center;
     }
@@ -135,7 +137,7 @@
 - (ForgetPsWdView *)forgetPsWdAlertView
 {
     if (!_forgetPsWdAlertView) {
-        self.forgetPsWdAlertView = [[ForgetPsWdView alloc] initWithFrame:CGRectMake(40, 120, 570, 399)];
+        self.forgetPsWdAlertView = [[ForgetPsWdView alloc] initWithFrame:CGRectMake(0, 0, 570, 399)];
         self.forgetPsWdAlertView.delegate = self;
         self.forgetPsWdAlertView.center = self.view.center;
     }
@@ -153,7 +155,7 @@
 - (HelpView *)helpAlertView
 {
     if (!_helpAlertView) {
-        self.helpAlertView = [[HelpView alloc] initWithFrame:CGRectMake(40, 120, 570, 399)];
+        self.helpAlertView = [[HelpView alloc] initWithFrame:CGRectMake(0, 0, 570, 399)];
         self.helpAlertView.delegate = self;
         self.helpAlertView.center = self.view.center;
     }

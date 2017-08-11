@@ -18,6 +18,8 @@
 		AFC694C3B9EA14550609F0DE /* libPods-LoginDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F84E154615D1F719D3072CEF /* libPods-LoginDemo.a */; };
 		C559A7551F37FC0B0066F1EE /* GuidePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C559A7541F37FC0B0066F1EE /* GuidePageViewController.m */; };
 		C582BF551F3852C4001CBEED /* CALayer+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = C582BF541F3852C4001CBEED /* CALayer+Transition.m */; };
+		C5CA2A711F3D55BA00464844 /* FCUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CA2A6E1F3D55BA00464844 /* FCUUID.m */; };
+		C5CA2A721F3D55BA00464844 /* UIDevice+FCUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CA2A701F3D55BA00464844 /* UIDevice+FCUUID.m */; };
 		C5DC43A21F334C9E00351C61 /* ForgetPsWdView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DC43991F334C9E00351C61 /* ForgetPsWdView.m */; };
 		C5DC43A31F334C9E00351C61 /* HelpView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DC439B1F334C9E00351C61 /* HelpView.m */; };
 		C5DC43A41F334C9E00351C61 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DC439D1F334C9E00351C61 /* LoginView.m */; };
@@ -65,6 +67,10 @@
 		C559A7541F37FC0B0066F1EE /* GuidePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidePageViewController.m; sourceTree = "<group>"; };
 		C582BF531F3852C4001CBEED /* CALayer+Transition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Transition.h"; sourceTree = "<group>"; };
 		C582BF541F3852C4001CBEED /* CALayer+Transition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Transition.m"; sourceTree = "<group>"; };
+		C5CA2A6D1F3D55BA00464844 /* FCUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCUUID.h; sourceTree = "<group>"; };
+		C5CA2A6E1F3D55BA00464844 /* FCUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCUUID.m; sourceTree = "<group>"; };
+		C5CA2A6F1F3D55BA00464844 /* UIDevice+FCUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+FCUUID.h"; sourceTree = "<group>"; };
+		C5CA2A701F3D55BA00464844 /* UIDevice+FCUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+FCUUID.m"; sourceTree = "<group>"; };
 		C5DC43981F334C9E00351C61 /* ForgetPsWdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPsWdView.h; sourceTree = "<group>"; };
 		C5DC43991F334C9E00351C61 /* ForgetPsWdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPsWdView.m; sourceTree = "<group>"; };
 		C5DC439A1F334C9E00351C61 /* HelpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpView.h; sourceTree = "<group>"; };
@@ -129,6 +135,7 @@
 		182DB0721F2F27DD00BE06BF /* LoginDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C5CA2A6C1F3D55BA00464844 /* FCUUID */,
 				C559A7521F37FBEF0066F1EE /* Guidepage */,
 				C5DC43971F334C9E00351C61 /* LoginAndRegister */,
 				182DB0761F2F27DD00BE06BF /* AppDelegate.h */,
@@ -187,6 +194,17 @@
 				C559A7541F37FC0B0066F1EE /* GuidePageViewController.m */,
 			);
 			path = Guidepage;
+			sourceTree = "<group>";
+		};
+		C5CA2A6C1F3D55BA00464844 /* FCUUID */ = {
+			isa = PBXGroup;
+			children = (
+				C5CA2A6D1F3D55BA00464844 /* FCUUID.h */,
+				C5CA2A6E1F3D55BA00464844 /* FCUUID.m */,
+				C5CA2A6F1F3D55BA00464844 /* UIDevice+FCUUID.h */,
+				C5CA2A701F3D55BA00464844 /* UIDevice+FCUUID.m */,
+			);
+			path = FCUUID;
 			sourceTree = "<group>";
 		};
 		C5DC43971F334C9E00351C61 /* LoginAndRegister */ = {
@@ -403,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5DC43A41F334C9E00351C61 /* LoginView.m in Sources */,
+				C5CA2A711F3D55BA00464844 /* FCUUID.m in Sources */,
 				C559A7551F37FC0B0066F1EE /* GuidePageViewController.m in Sources */,
 				C582BF551F3852C4001CBEED /* CALayer+Transition.m in Sources */,
 				C5DC43A31F334C9E00351C61 /* HelpView.m in Sources */,
@@ -410,6 +429,7 @@
 				182DB0781F2F27DD00BE06BF /* AppDelegate.m in Sources */,
 				182DB0751F2F27DD00BE06BF /* main.m in Sources */,
 				C5DC43A61F334C9E00351C61 /* UnderLineButtonView.m in Sources */,
+				C5CA2A721F3D55BA00464844 /* UIDevice+FCUUID.m in Sources */,
 				C5DC43A21F334C9E00351C61 /* ForgetPsWdView.m in Sources */,
 				C5DC43A51F334C9E00351C61 /* RegisterView.m in Sources */,
 			);
