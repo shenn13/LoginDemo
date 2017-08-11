@@ -4,5 +4,6 @@ target 'LoginDemo' do
 
 pod 'SVProgressHUD'
 pod 'UICKeyChainStore'
+pod 'IQKeyboardManager'
 
 end

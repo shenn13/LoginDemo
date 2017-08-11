@@ -1,15 +1,18 @@
 PODS:
+  - IQKeyboardManager (4.0.11)
   - SVProgressHUD (2.1.2)
   - UICKeyChainStore (2.1.1)
 
 DEPENDENCIES:
+  - IQKeyboardManager
   - SVProgressHUD
   - UICKeyChainStore
 
 SPEC CHECKSUMS:
+  IQKeyboardManager: 83eae5318483a34eb2069ef413d195b97605232e
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   UICKeyChainStore: 239558492fa260531a0774cfc611ea83a6eaff3a
 
-PODFILE CHECKSUM: 2a81844989ef0d545a785294de6210ebd2e7a8d3
+PODFILE CHECKSUM: dbcee75e0e595bfdbcbd95b4aac29f9ea54110e6
 
 COCOAPODS: 1.2.1

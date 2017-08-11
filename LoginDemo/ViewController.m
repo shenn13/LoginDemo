@@ -35,6 +35,10 @@
     
     NSLog(@"\n-uuid:   %@\n -uuidForSession:   %@\n -uuidForInstallation:   %@\n -uuidForVendor:  %@\n -uuidForDevice:   %@\n",[FCUUID uuid],[FCUUID uuidForSession],[FCUUID uuidForInstallation],[FCUUID uuidForVendor],[FCUUID uuidForDevice]);
     
+    
+    
+    
+    
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 80)];
     button.center = self.view.center;
     [button setTitle:@"点击" forState:UIControlStateNormal];

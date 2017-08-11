@@ -8,7 +8,7 @@
 
 #import "RegisterView.h"
 #import "SVProgressHUD.h"
-
+#import "IQKeyboardManager.h"
 #define kView_width self.frame.size.width
 #define kView_height self.frame.size.height
 
@@ -65,6 +65,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+   
         
         self.layer.masksToBounds = YES;
         self.layer.cornerRadius = 8;
@@ -451,6 +452,8 @@
         return;
     }
     
+  
+    
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     
     self.bgView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
@@ -462,6 +465,9 @@
     label.text = @"设置初始密码";
     label.textColor = [UIColor whiteColor];
     label.textAlignment = NSTextAlignmentLeft;
+    
+   
+    
     
     self.closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.closeButton.frame = CGRectMake(self.frame.size.width - kControl_height, 0, kControl_height, kControl_height);

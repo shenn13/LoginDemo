@@ -11,6 +11,8 @@
 #import "GuidePageViewController.h"
 #import "CALayer+Transition.h"
 
+#import "IQKeyboardManager.h"
+
 @interface AppDelegate ()<GuidePageViewDelegate>
 
 @end
@@ -20,9 +22,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-   
-    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.backgroundColor = [UIColor whiteColor];
+//   
+//    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+//    self.window.backgroundColor = [UIColor whiteColor];
+    
+    
     
     // 测试的时候改变info 里的版本号就可以了
     NSArray *images = @[@"first",@"second",@"three",@"fourth"];
@@ -38,6 +42,7 @@
     }
     
     
+    [IQKeyboardManager sharedManager].enable = YES;
     return YES;
 }
 
