@@ -39,11 +39,25 @@
     
     
     
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 80)];
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
     button.center = self.view.center;
     [button setTitle:@"点击" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button setBackgroundColor:[UIColor yellowColor]];
+    
+    [button.layer setMasksToBounds:YES];
+    [button.layer setCornerRadius:button.bounds.size.width/2]; //设置矩形四个圆角半径
+    //边框宽度
+    [button.layer setBorderWidth:4.0];
+    //设置边框颜色有两种方法：第一种如下:
+    //        CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    //        CGColorRef colorref = CGColorCreate(colorSpace,(CGFloat[]){ 0, 0, 0, 1 });
+    //        [btn.layer setBorderColor:colorref];//边框颜色
+    //第二种方法如下:
+    button.layer.borderColor=[UIColor redColor].CGColor;
+    
     [button addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
 }
