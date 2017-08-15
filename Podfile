@@ -5,5 +5,7 @@ target 'LoginDemo' do
 pod 'SVProgressHUD'
 pod 'UICKeyChainStore'
 pod 'IQKeyboardManager'
+pod 'lottie-ios'
+
 
 end

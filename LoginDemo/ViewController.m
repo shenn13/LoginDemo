@@ -12,6 +12,7 @@
 #import "ForgetPsWdView.h"
 #import "HelpView.h"
 
+#import "ControlEncapsTool.h"
 
 #import "FCUUID.h"
 
@@ -33,7 +34,17 @@
     
      [super viewDidLoad];
     
+    
+    
+    
     NSLog(@"\n-uuid:   %@\n -uuidForSession:   %@\n -uuidForInstallation:   %@\n -uuidForVendor:  %@\n -uuidForDevice:   %@\n",[FCUUID uuid],[FCUUID uuidForSession],[FCUUID uuidForInstallation],[FCUUID uuidForVendor],[FCUUID uuidForDevice]);
+    
+    
+    
+    
+    
+    UIButton *buttonnn = [ControlEncapsTool buttonWithFrame:CGRectMake(100, 100, 100, 100) title:@"button" titleColor:@"#dbdbdb" titleFont:[UIFont systemFontOfSize:22] setImage:nil setHighlightImage:nil Target:self Action:@selector(buttonClicked)];
+    [self.view addSubview:buttonnn];
     
     
     

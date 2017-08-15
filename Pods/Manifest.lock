@@ -1,18 +1,21 @@
 PODS:
   - IQKeyboardManager (4.0.11)
+  - lottie-ios (2.0.1)
   - SVProgressHUD (2.1.2)
   - UICKeyChainStore (2.1.1)
 
 DEPENDENCIES:
   - IQKeyboardManager
+  - lottie-ios
   - SVProgressHUD
   - UICKeyChainStore
 
 SPEC CHECKSUMS:
   IQKeyboardManager: 83eae5318483a34eb2069ef413d195b97605232e
+  lottie-ios: eebbfc38fb4259235270f28a843b978c76b2a878
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   UICKeyChainStore: 239558492fa260531a0774cfc611ea83a6eaff3a
 
-PODFILE CHECKSUM: dbcee75e0e595bfdbcbd95b4aac29f9ea54110e6
+PODFILE CHECKSUM: 597f03172c6d2100c1a6396924834564ecdf9094
 
 COCOAPODS: 1.2.1
