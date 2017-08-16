@@ -1,0 +1,162 @@
+//
+//  WYButton+Extenison.m
+//  LearningEducation
+//
+//  Created by Apple on 2017/7/17.
+//  Copyright © 2017年 Apple. All rights reserved.
+//
+
+#import "WYButton+Extenison.h"
+
+@implementation WYButton (Extenison)
+
++(WYButton *)buttonWithImage:(NSString *)image backgroudNormalImage:(NSString *)bgNormalimage seletedImage:(NSString *)seletedImage
+{
+    WYButton *button =[self buttonWithBackgroudNormalImage:bgNormalimage seletedImage:seletedImage];
+    if ([UIImage imageNamed:image]) {
+        [button setImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
+    }
+    
+    return button;
+}
++(WYButton *)buttonWithImage:(NSString *)image seletedImage:(NSString *)seletedImage
+{
+    WYButton *button = [[WYButton alloc]init];
+    [button setImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:seletedImage] forState:UIControlStateSelected];
+    [self buttonSetEdgeAndContentWithButton:button];
+    button.size = button.currentImage.size;
+    return button;
+}
++(WYButton *)buttonWithBackgroudNormalImage:(NSString *)bgNormalimage seletedImage:(NSString *)seletedImage
+{
+    WYButton *button = [[WYButton alloc]init];
+    [button setBackgroundImage:[UIImage imageNamed:bgNormalimage] forState:UIControlStateNormal];
+    [button setBackgroundImage:[UIImage imageNamed:seletedImage] forState:UIControlStateSelected];
+    [self buttonSetEdgeAndContentWithButton:button];
+    button.size = button.currentBackgroundImage.size;
+    return button;
+}
+
++(WYButton *)buttonWithImage:(NSString *)image
+{
+    WYButton *button = [[WYButton alloc]init];
+    [button setImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
+    [self buttonSetEdgeAndContentWithButton:button];
+    return button;
+}
++(void)buttonSetEdgeAndContentWithButton:(WYButton *)button
+{
+    button.size = button.currentImage.size;
+    button.titleLabel.numberOfLines = 0;
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+}
+
+
++(WYButton *)voiceButton
+{
+    WYButton *voice = [[WYButton alloc]init];
+    [voice setBackgroundImage:[UIImage imageNamed:@"Voice_bg"] forState:UIControlStateNormal];
+    [voice setImage:[UIImage imageNamed:@"voice"] forState:UIControlStateNormal];
+    voice.size = voice.currentBackgroundImage.size;
+    return voice;
+}
+
+
++(WYButton *)changeButtonWithImageNamed:(NSString *)imageName
+{
+    WYButton *voice = [[WYButton alloc]init];
+    [self setBackgroudImage:@"button_bg" button:voice];
+    [voice setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+    voice.size = voice.currentBackgroundImage.size;
+    return voice;
+}
+
+
+
++(WYButton *)buttonWithHorizontalWithTitle:(NSString *)title imgName:(NSString *)imgName
+{
+    WYButton *voice = [[WYButton alloc]init];
+    [self setBackgroudImage:imgName button:voice];
+    [voice setTitle:title forState:UIControlStateNormal];
+    [voice setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [voice setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
+    voice.size = voice.currentBackgroundImage.size;
+    voice.titleLabel.font = TTFont;
+    voice.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    voice.titleLabel.numberOfLines = 0;
+    voice.titleEdgeInsets = UIEdgeInsetsMake(0, 20, 0, 0);
+    return voice;
+}
+/**设置按钮背景图片和图片  几个状态*/
++(WYButton *)buttonWithImageNamed:(NSString *)imageName
+{
+    WYButton *voice = [[WYButton alloc]init];
+    [self setBackgroudImage:@"button_bg" button:voice];
+    [self setImage:imageName button:voice];
+    voice.size = voice.currentBackgroundImage.size;
+    return voice;
+}
+
++(WYButton *)buttonBackGroudImage
+{
+    WYButton *voice = [[WYButton alloc]init];
+    [voice setBackgroundImage:[UIImage imageNamed:@"button_bg_Normal"] forState:UIControlStateNormal];
+    [voice setBackgroundImage:[UIImage imageNamed:@"button_bg_Seletced"] forState:UIControlStateSelected];
+    [voice setImageEdgeInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
+    voice.size = voice.currentBackgroundImage.size;
+    return voice;
+}
+
+/**设置按钮背景图片 和图片 几个状态*/
++(WYButton *)buttonWithBackImageNamed:(NSString *)imageName imageName:(NSString *)img
+{
+    WYButton *btn = [[WYButton alloc]init];
+    [self setBackgroudImage:imageName button:btn];
+    [self setImage:img button:btn];
+    btn.size = btn.currentBackgroundImage.size;
+    return btn;
+}
+/**设置按钮选中图片*/
++(void)setImage:(NSString *)imageName button:(WYButton *)button
+{
+    UIImage *normalImg = [UIImage imageNamed:[NSString stringWithFormat:@"%@_Normal",imageName]];
+    if (normalImg) {
+        [button setImage:normalImg forState:UIControlStateNormal];
+    }
+    UIImage *selectedImg = [UIImage imageNamed:[NSString stringWithFormat:@"%@_Selected",imageName]];
+    if (selectedImg) {
+        [button setImage:selectedImg forState:UIControlStateSelected];
+    }
+}
+
+/**设置背景图片*/
++(void)setBackgroudImage:(NSString *)imageName button:(WYButton *)button
+{
+    UIImage *normalImg = [UIImage imageNamed:[NSString stringWithFormat:@"%@_Normal",imageName]];
+    if (normalImg) {
+        [button setBackgroundImage:normalImg forState:UIControlStateNormal];
+    }
+    UIImage *selectedImg = [UIImage imageNamed:[NSString stringWithFormat:@"%@_Selected",imageName]];
+    if (selectedImg) {
+        [button setBackgroundImage:selectedImg forState:UIControlStateSelected];
+    }
+    if([UIImage imageNamed:[NSString stringWithFormat:@"%@_Error",imageName]]){
+        [button setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@_Error",imageName]] forState:UIControlStateDisabled];
+    }
+}
+
+
+/**默认存在的背景图片 ，只需要添加图片就可以*/
++(WYButton *)buttonHaveBackImageAndImage:(NSString *)image
+{
+    WYButton *voice = [[WYButton alloc]init];
+    [self setBackgroudImage:@"btn_auto_bg" button:voice];
+    if ([UIImage imageNamed:image]) {
+        [voice setImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
+        [voice setImageEdgeInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
+    }
+    return voice;
+}
+
+@end
